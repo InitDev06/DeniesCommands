@@ -1,0 +1,125 @@
+# DeniesCommands 1.0.1 - Thanks for using my plugin!
+#
+# date_format: This is the format of time for the logs of the commands.
+# sounds_settings - {
+#
+#    reproduce: Reproduce the sounds of the events to player?
+#
+# titles_settings - {
+#
+#    send: Send the titles to player?
+#
+# messages - {
+#
+#    prefix: The prefix of the messages & commands.
+#
+# Date format for the logs.
+date_format: "dd/MM/yyyy - HH:mm:ss"
+
+# Settings of the sounds.
+sounds_settings:
+  # Reproduce the sounds?
+  reproduce: true
+
+  # Permission Sound
+  permission: ENTITY_ITEM_BREAK
+
+  # Reload Sound
+  reload: UI_BUTTON_CLICK
+
+  # Blocked Command Sound
+  blocked_cmd: ENTITY_VILLAGER_DEATH
+
+  # Level of volume?
+  volume: 1.0
+
+  # Level of pitch?
+  pitch: 1.0
+
+# Settings of the titles.
+titles_settings:
+  # Send the titles?
+  send: true
+
+  # In Time
+  in: 20
+
+  # Show Time
+  show: 40
+
+  # Out Time
+  out: 20
+
+# Type of messages
+messages:
+  # Prefix of the commands.
+  prefix: "&cDeniesCommands &8»"
+
+  # Not Console Message
+  cannot_console: "<prefix> &cThis command can't be executed in console!"
+
+  # Not Permission Message
+  not_permission: "<prefix> &cYou don't have permission!"
+
+  # Not Command Message
+  not_command: "<prefix> &cThis command doesn't exists!"
+
+  # Help Message
+  list_cmds: |-
+    &l
+    &c      DeniesCommands &61.0.1
+    &l
+    &8 » &a/deniescommands [dc] &fMain Command.
+    &8 » &a/dc reload &fReload the plugin.
+    &8 » &a/dc commands &fShow the commands.
+    &l
+
+  # Reload Message
+  reload: "<prefix> &7The plugin was reloaded in &a<ms>ms&7."
+
+  # Commands Messages
+  commands:
+    # Block the commands?
+    blocked_cmds_toggle: true
+
+    # Blocked Message
+    blocked_command: "&cThe command &6<command> &cwas blocked by the &c&lSTAFF"
+
+    # Title Message
+    blocked_cmd_title: "&c&lBLOCKED COMMAND"
+
+    # Subtitle Message
+    blocked_cmd_subtitle: "&7This command was blocked!"
+
+    # Logger Message
+    blocked_cmd_logger: "&cThe player &e<player> &chas try execute a blocked command the day &7<date_format>"
+    console_logger: "&cPlayer &e<player> &7(&c<address>&7) &chas try execute a blocked command!"
+
+    # Bypass Block
+    player_bypass_block: "&cThis command was blocked, &ebut you can use!"
+
+    # Punishment Message
+    unknown_type: "&cThe type of sender for the punishments is invalid or doesn't exists!"
+
+    # Commands List
+    blocked_cmds:
+      - /op
+      - /me
+      - /say
+      - /about
+      - /version
+      - /pl
+      - /plugins
+      - /bukkit:?
+
+    # Do Punishments?
+    punishments_toggle: true
+
+    # Punishments Sender
+    punishments_executor: CONSOLE # CONSOLE : Dispatch the command from the console, PLAYER : Dispatch the command from a player.
+    # if select PLAYER, the player must be have the permission 'deniescommands.dispatch.punishments',
+    # and the permission of the command(s) in 'punishments' list.
+
+    # Punishments List
+    punishments:
+      - kick <player> &cDon't use this command!

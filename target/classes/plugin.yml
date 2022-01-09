@@ -1,0 +1,29 @@
+name: DeniesCommands
+main: org.alqj.dev.denies.DeniesCommandPlugin
+version: 1.0.1
+api-version: 1.13
+author: iAlqjDV
+website: https://www.spigotmc.org/members/ialqjdv.1471925/
+permissions:
+  deniescommands.admin:
+    children:
+      deniescommands.cmd.*:
+        children:
+          - deniescommands.cmd.commands
+          - deniescommands.cmd.reload
+      deniescommands.bypass.*:
+        children:
+          - deniescommands.bypass.commands
+          - deniescommands.bypass.punishments
+          - deniescommands.bypass.logs
+      deniescommands.log.*:
+        children:
+          - deniescommands.log.command
+          - deniescommands.log.error
+      deniescommands.dispatch.*:
+        children:
+          - deniescommands.dispatch.punishments
+commands:
+  deniescommands:
+    aliases: [dc]
+    description: Main Command.
