@@ -1,2 +1,2 @@
 # DeniesCommands
-Add security for the commands of your server!
+Source code of DeniesCommands plugin, download in:
